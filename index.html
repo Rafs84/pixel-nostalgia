@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Nostalgia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="canvas-container">
+        <canvas id="pixelCanvas"></canvas>
+        <canvas id="templateCanvas"></canvas>
+    </div>
+
+    <div class="tools">
+        <input type="color" id="colorPicker" value="#000000">
+        <button id="templateBtn" class="round-btn"><i class="fas fa-image"></i></button>
+        <button id="clearBtn" class="round-btn"><i class="fas fa-trash"></i></button>
+        <button id="exportBtn" class="round-btn"><i class="fas fa-download"></i></button>
+    </div>
+
+    <div id="templateModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2 class="modal-title">Choose a template</h2>
+            </div>
+            <div class="template-grid">
+                <!-- Templates will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <div id="exportModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Export Options</h2>
+            <div class="export-options">
+                <button class="export-btn" data-format="svg">SVG</button>
+                <button class="export-btn" data-format="png">PNG</button>
+                <button class="export-btn" data-format="jpg">JPG</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
